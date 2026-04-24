@@ -77,4 +77,10 @@ Follow these steps to get the project up and running on your local machine:
 ### 1. Clone the Repository
 Open **Git Bash** and run:
 ```bash
-git clone [https://github.com/yousefsrhan/N_Queens.git](https://github.com/yousefsrhan/N_Queens.git)
+git clone https://github.com/yousefsrhan/N_Queens.git
+```
+---
+###2. Open the project using your programming IDE
+---
+###3. Run the index.html file!!⛏⚒
+

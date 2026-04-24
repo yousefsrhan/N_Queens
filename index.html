@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script> <!-- defer = runs after page loads -->
+  <title>N-Queens AI Solver</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo-icon">♛</div>
+  </header>
+
+  <main>
+    <h1>N-Queens <span class="gradient-text">AI Solver</span></h1>
+    <p class="subtitle">Master the classic search algorithm puzzle. Experience the convergence of pure logic and artificial intelligence.</p>
+
+    <div class="button-group">
+      <button class="btn-play">▶ PLAY</button>
+      <button class="btn-solve">🤖 SOLVE WITH AI</button>
+    </div>
+
+    <!-- JS updates this number -->
+    <div class="queen-counter">Queens Placed: <span id="current-queens">0</span>/4</div>
+
+    <!-- JS builds the board here -->
+    <div id="board" class="board-grid"></div>
+
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-header">COMPUTATION TIME</div>
+        <div id="time-val" class="stat-value">0s</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-header">TOTAL STEPS</div>
+        <div id="steps-val" class="stat-value">0</div>
+      </div>
+    </div>
+  </main>
+
+  <!-- success modal -->
+  <div id="success-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="success-icon">🏆</div>
+      <h2>Puzzle Solved!</h2>
+      <p>Great job! You've mastered the logic of N-Queens.</p>
+      <button onclick="closeModal()" class="btn-play" style="margin: 20px auto 0;">AWESOME</button>
+    </div>
+  </div>
+
+  <!-- fail modal -->
+  <div id="fail-modal" class="modal-overlay">
+    <div class="modal-content" style="border-color: #ff66c4;">
+      <div class="success-icon">⚠️</div>
+      <h2>No Solution!</h2>
+      <p>This configuration cannot be solved. Try a different strategy!</p>
+      <button onclick="closeModal()" class="btn-solve" style="margin: 20px auto 0; background: #ff66c4;">TRY AGAIN</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="team-label">TEAM MEMBERS</div>
+    <div class="team-members">
+      <span>Hossam Eldeen Nemr</span>
+      <span>Mohamed Elfadel</span>
+      <span>Yousef Sarhan</span>
+    </div>
+  </footer>
+
+</body>
+</html>

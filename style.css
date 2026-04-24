@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* padding doesn't affect total size */
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b1121;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  margin-top: 40px;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  background: #00d2ff;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0b1121;
+}
+
+main {
+  flex: 1; /* takes remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00d2ff, #ff66c4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 560px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+button {
+  border: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.btn-play {
+  background: #00d2ff;
+  color: #0b1121;
+}
+
+.btn-solve {
+  background: #1a2235;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.queen-counter {
+  color: #00d2ff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.board-grid {
+  display: none; /* shown when game starts */
+  grid-template-columns: repeat(4, 75px);
+  grid-template-rows: repeat(4, 75px);
+  gap: 4px;
+  background: #1e293b;
+  padding: 8px;
+  border-radius: 8px;
+  border: 2px solid rgba(0, 210, 255, 0.2);
+  margin-bottom: 40px;
+}
+
+.cell {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.cell.light { background: #334155; }
+.cell.dark  { background: #1e293b; }
+
+.cell.conflict {
+  background: rgba(255, 102, 196, 0.2) !important;
+  border: 2px solid #ff66c4;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-5px); }
+  75%       { transform: translateX(5px); }
+}
+
+.stats-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: #171d2f;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  width: 200px;
+  text-align: left;
+}
+
+.stat-header {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  background: rgba(11, 17, 33, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+.modal-content {
+  background: #171d2f;
+  border: 1px solid rgba(0, 210, 255, 0.3);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  max-width: 380px;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+footer {
+  padding: 24px 40px;
+  width: 100%;
+}
+
+.team-label {
+  font-size: 0.7rem;
+  color: #64748b;
+  margin-bottom: 4px;
+}
+
+.team-members {
+  display: flex;
+  gap: 20px;
+  font-size: 0.85rem;
+  color: #94a3b8;
+}

@@ -80,7 +80,7 @@ Open **Git Bash** and run:
 git clone https://github.com/yousefsrhan/N_Queens.git
 ```
 ---
-###2. Open the project using your programming IDE
+### 2. Open the project using your programming IDE
 ---
 ### 3. Run the index.html file!!⛏⚒
 
